@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="hospital">
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.password">12345</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hospital</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="com.hospitalpro.Entity.Hospital"/>
+        <mapping class="com.hospitalpro.Entity.EntityDoctor"/>
+        <mapping class="com.hospitalpro.Entity.HospitalDoctor"/>
+        <mapping class="com.hospitalpro.Entity.Appointment"/>
+        <mapping class="com.hospitalpro.Entity.Admin"/>
+        <mapping class="com.hospitalpro.Entity.Test" />
+        <mapping class="com.hospitalpro.Entity.DoctorModify"/>
+        <mapping class="com.hospitalpro.Entity.KeyPoints"/>
+        <mapping class="com.hospitalpro.Entity.NotiesBoard"/>
+        <mapping class="com.hospitalpro.Entity.RoomDetails" />
+        <mapping class="com.hospitalpro.Entity.AdmitDetails"/>
+        <mapping class="com.hospitalpro.Entity.ConsultionBilling"/>
+    </session-factory>
+</hibernate-configuration>
